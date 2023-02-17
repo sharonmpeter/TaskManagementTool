@@ -6,6 +6,8 @@
     <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
     <link rel="stylesheet" href="dashboardadmin.css">
     <!-- Boxicons CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="dashboardadmin.js"></script>
@@ -21,13 +23,13 @@
         <li>
           <a href="#" class="active">
             <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">Dashboard</span>
+            <span class="links_name" onclick="viewDashboard();">Dashboard</span>
           </a>
-        </li>
+        </li>\
         <li>
           <a href="#">
             <i class='bx bx-box' ></i>
-            <span class="links_name">Tasks</span>
+            <span class="links_name" onclick="team();">Team Members</span>
           </a>
         </li>
         <li>
@@ -65,15 +67,15 @@
     
     <div class="home-content">
     <div class="sales-boxes">
-        <!-- <div class="recent-sales box"> -->
+        <div class="recent-sales box">
           <div class="title">Project - My Home</div>
-          <div class="my-class">
-            <button class="add-button" onclick="addtask()">Add task</button>
-          </div>
+          <!-- <div class="my-class"> -->
+            <button class="add-button"  onclick="addtask()">Add Task</button>
+          <!-- </div> -->
           <div><br>
             <!-- <h4>Employee Record</b></h4> -->
             <center>
-             <table id="tableData" border ="1" cellpadding="15">
+             <table id="tableData"  cellpadding="15" width="100%">
               <tr>
                <td><b>Task Name</b></td>
                <td><b>Description</b></td>
@@ -81,97 +83,63 @@
                <td><b>Start Date</b></td>
                <td><b>End Date</b></td>
                <td><b>Total Hours</b></td>
+               <td><b>Delete</b></td>
               </tr>
              </table>
             </center>
            </div>
-         
+          </div>
     </div>
   </section>
 
   <!-- add task start-->
   <div id = "add" class="add-content">
     <button class="close-btn" onclick="closeDiv()">X</button>
-    <!--<div class="new-boxes">
-        <div class="recent-new box">-->
           <div class="title">Add Task</div>
           <div class="add-details">
-           
             <ul class="details" style="list-style-type: none;">
-              <!--
-              <li class="topic">Task name</li>
-              <li><a href="#"></a></li>
-              -->
               <li style="padding: 10px;">
               <label for="task-input">Task Name:</label>
     <input type="text" id="taskName" name="task">
   </li>
             </ul>
-            
             <ul class="details" style="list-style-type: none;">
-             
                 <li style="padding: 10px;">
                   <label for="task-input">Description:</label>
     <input type="text" id="taskDescription" name="description">
   </li>
             </ul>
-            
             <ul class="details" style="list-style-type: none;">
              
                 <li style="padding: 10px;">
-                <label for="assignee-input">Assignee:</label>
+                <label for="assignee-input">Assigned To:</label>
     <input type="text" id="asignee" name="assignee">
   </li>
               </ul>
           <ul class="details" style="list-style-type: none;">
-            <!--
-            <li class="topic">Start Date</li>
-            <li><a href="#"></a></li>
-            -->
-            <li style="padding: 10px;">
+           <li style="padding: 10px;">
               <label for="startdate-input">Start Date:</label>
-  <input type="text" id="sd" name="startdate">
-</li>
-            
-            
+  <input type="date" id="sd" name="startdate">
+</li> 
           </ul>
           <ul class="details" style="list-style-type: none;">
-            <!--
-            <li class="topic">End Date</li>
-            <li><a href="#"></a></li>
-            -->
             <li style="padding: 10px;">
               <label for="enddate-input">End Date:</label>
-  <input type="text" id="ed" name="Enddate">
+  <input type="date" id="ed" name="Enddate">
 </li>
           </ul>
         
         <ul class="details" style="list-style-type: none;">
-          <!--
-        <li class="topic">Total hours</li>
-        <li><a href="#"></a></li>
-        -->
         <li style="padding: 10px;">
           <label for="totalhours-input">Total Hours:</label>
-<input type="text" id="hours" name="totalhours">
+<input type="number" id="hours" name="totalhours">
 </li>
       </ul>
-      <button class="save-btn" onclick="addTableRow()">Save</button>
+      <button class="save-btn" onclick="saveDiv()">Save</button>
           </div>
-        <!--</div>
-        
-      </div>-->
     </div>
 
-<!--
-    add task end 
-
-<div id="my-div" class="add-content">
-    My content goes here
-  </div>
--->
-
-  <script>
+  <script src = 'dashboard.js'>
     let sidebar = document.querySelector(".sidebar");
  let sidebarBtn = document.querySelector(".sidebarBtn");
  sidebarBtn.onclick = function() {

@@ -1,19 +1,13 @@
-var data = [
-    {
-      "UserID": 1,
-      "UserName": "rooter",
-      "Password": "12345",
-      "Country": "UK",
-      "Email": "sac@gmail.com"
-    },
-    {
-      "UserID": 2,
-      "UserName": "binu",
-      "Password": "123",
-      "Country": "uk",
-      "Email": "Binu@gmail.com"
-    }
-];
+var taskName = document.getElementById("taskName");
+var taskDescription = document.getElementById("taskDescription");
+var asignee = document.getElementById("asignee");
+var sd = document.getElementById("sd");
+var ed = document.getElementById("ed");
+var hours = document.getElementById("hours");
+// var table = document.getElementById("tableData");
+
+
+
 function addtask(){
    // window.alert("hello");
     var e=document.getElementById("add");
@@ -24,9 +18,11 @@ function addtask(){
 function closeDiv()
 {
     document.getElementById("add").style.display = "none";
+    addTableRow();
 }
 function saveDiv(){
-    closeDiv();
+   closeDiv();
+   
 }
 
 function ondelete(task){
@@ -47,24 +43,17 @@ function onedit(task){
   
 }
 
-// tbl()
-$(document).ready(
-    function tbl() {
-    var html = '<table class="table table-striped">';
-    html += '<tr>';
-    var flag = 0;
-    $.each(data[0], function(index, value){
-        html += '<th>'+index+'</th>';
-    });
-    html += '</tr>';
-     $.each(data, function(index, value){
-         html += '<tr>';
-        $.each(value, function(index2, value2){
-            html += '<td>'+value2+'</td>';
-        });
-        html += '<tr>';
-     });
-     html += '</table>';
-     $('body').html(html);
-}
-);
+
+
+function addTableRow() {
+    
+    var table = document.getElementById("tableData");
+    var rowCount = table.rows.length;
+    var row = table.insertRow(rowCount);
+    row.insertCell(0).innerHTML= taskName.value;
+    row.insertCell(1).innerHTML= taskDescription.value;
+    row.insertCell(2).innerHTML= asignee.value;
+    row.insertCell(3).innerHTML= sd.value;
+    row.insertCell(4).innerHTML= ed.value;
+    row.insertCell(5).innerHTML= hours.value;
+   }

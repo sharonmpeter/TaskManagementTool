@@ -65,70 +65,27 @@
     
     <div class="home-content">
     <div class="sales-boxes">
-        <div class="recent-sales box">
+        <!-- <div class="recent-sales box"> -->
           <div class="title">Project - My Home</div>
           <div class="my-class">
             <button class="add-button" onclick="addtask()">Add task</button>
           </div>
-          <table>
-            
-          </table>
-          <!-- <div class="sales-details">
-            <ul class="details">
-              <li class="topic">Task</li>
-              <li><a href="#">Task 1</a></li>
-              <li><a href="#">Task 2</a></li>
-              
-            </ul>
-            <ul class="details">
-                <li class="topic">Assignee</li>
-                <li><a href="#">Paul</a></li>
-                <li><a href="#">Ambily</a></li>
-                
-              </ul>
-            <ul class="details">
-            <li class="topic">Status</li>
-            <li><a href="#">Open</a></li>
-            <li><a href="#">Completed</a></li>
-            
-          </ul>
-          
-          <ul class="details">
-            <li class="topic">Start Date</li>
-            <li><a href="#">2/1/2023</a></li>
-            <li><a href="#">10/1/2023</a></li>
-            
-          </ul>
-          <ul class="details">
-            <li class="topic">End Date</li>
-            <li><a href="#">21/2/2023</a></li>
-            <li><a href="#">2/2/2023</a></li>
-           
-          </ul>
-        
-        <ul class="details">
-        <li class="topic">Total hours</li>
-        <li><a href="#">40</a></li>
-        <li><a href="#">30</a></li>  
-      </ul>
-      <ul class="details">
-        <li class="topic">Delete task</li>
-        <li><button class="delete-btn1" onclick="ondelete(1)">Delete</button></li>
-        <li><button class="delete-btn2" onclick="ondelete(2)">Delete</button></li>
-        
-      </ul>
-      <ul class="details">
-        <li class="topic">Edit task</li>
-        <li><button class="edit-btn1" onclick="onedit(1)">Edit</button></li>
-        <li><button class="edit-btn2" onclick="onedit(2)">Edit</button></li>
-      </ul>
-          </div>
-          <div class="button">
-            <a href="#">See All</a>
-          </div> -->
-        <!-- </div> --> 
-        
-      </div>
+          <div><br>
+            <!-- <h4>Employee Record</b></h4> -->
+            <center>
+             <table id="tableData" border ="1" cellpadding="15">
+              <tr>
+               <td><b>Task Name</b></td>
+               <td><b>Description</b></td>
+               <td><b>Asignee</b></td>
+               <td><b>Start Date</b></td>
+               <td><b>End Date</b></td>
+               <td><b>Total Hours</b></td>
+              </tr>
+             </table>
+            </center>
+           </div>
+         
     </div>
   </section>
 
@@ -137,7 +94,7 @@
     <button class="close-btn" onclick="closeDiv()">X</button>
     <!--<div class="new-boxes">
         <div class="recent-new box">-->
-          <div class="title">Project - My Home</div>
+          <div class="title">Add Task</div>
           <div class="add-details">
            
             <ul class="details" style="list-style-type: none;">
@@ -146,19 +103,24 @@
               <li><a href="#"></a></li>
               -->
               <li style="padding: 10px;">
-              <label for="task-input">Task name:</label>
-    <input type="text" id="task-input" name="task">
+              <label for="task-input">Task Name:</label>
+    <input type="text" id="taskName" name="task">
   </li>
             </ul>
             
             <ul class="details" style="list-style-type: none;">
-              <!--
-                <li class="topic">Assignee</li>
-                <li><a href="#"></a></li>
-                -->
+             
+                <li style="padding: 10px;">
+                  <label for="task-input">Description:</label>
+    <input type="text" id="taskDescription" name="description">
+  </li>
+            </ul>
+            
+            <ul class="details" style="list-style-type: none;">
+             
                 <li style="padding: 10px;">
                 <label for="assignee-input">Assignee:</label>
-    <input type="text" id="assignee-input" name="assignee">
+    <input type="text" id="asignee" name="assignee">
   </li>
               </ul>
           <ul class="details" style="list-style-type: none;">
@@ -168,7 +130,7 @@
             -->
             <li style="padding: 10px;">
               <label for="startdate-input">Start Date:</label>
-  <input type="text" id="startdate-input" name="startdate">
+  <input type="text" id="sd" name="startdate">
 </li>
             
             
@@ -180,7 +142,7 @@
             -->
             <li style="padding: 10px;">
               <label for="enddate-input">End Date:</label>
-  <input type="text" id="enddate-input" name="Enddate">
+  <input type="text" id="ed" name="Enddate">
 </li>
           </ul>
         
@@ -191,10 +153,10 @@
         -->
         <li style="padding: 10px;">
           <label for="totalhours-input">Total Hours:</label>
-<input type="text" id="totalhours-input" name="totalhours">
+<input type="text" id="hours" name="totalhours">
 </li>
       </ul>
-      <button class="save-btn" onclick="saveDiv()">Save</button>
+      <button class="save-btn" onclick="addTableRow()">Save</button>
           </div>
         <!--</div>
         

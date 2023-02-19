@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="users.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="dashboardadmin.js"></script>
+   </head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <!-- <i class='bx bxl-c-plus-plus'></i> -->
+          <span class="logo_name">Task</span>
+        </div>
+          <ul class="nav-links">
+            <li>
+              <a href="../dashboardadmin.html">
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name" onclick="viewDashboard();">Dashboard</span>
+              </a>
+            </li>\
+            <li>
+              <a href="#" class="active">
+                <i class='bx bx-box' ></i>
+                <span class="links_name">Team Members</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bx-list-ul' ></i>
+                <span class="links_name">Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bx-cog' ></i>
+                <span class="links_name">Setting</span>
+              </a>
+            </li>
+            <li class="log_out">
+                <a href="login.html">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Log out</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Team Members</span>
+      </div>
+      <div class="profile-details">
+        <span class="admin_name">Admin</span>
+        
+      </div>
+    </nav>
+    
+      <div class="home-content">
+    <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">Members</div>
+          <button class="add-button"  onclick="adduser()">Add User</button>
+          <div><br>
+            <center>
+             <table id="tableData1"  cellpadding="15" width="100%">
+              <tr>
+               <td><b>User Name</b></td>
+               <td><b>User Email</b></td>
+              </tr>
+             </table>
+            </center>
+           </div>
+          </div>
+          </div>
+    </div>
+  <!-- check-->
+
+  </section>
+
+  <!--add user-->
+  <div id = "add1" class="add-content1">
+    <button class="close-btn1" onclick="closeuser()">X</button>
+          <div class="title">Add User</div>
+          <div class="add-details1">
+            <ul class="details" style="list-style-type: none;">
+              <li style="padding: 10px;">
+              <label for="username-input">Name:</label>
+    <input type="text" id="userName" name="usrname">
+  </li>
+  <ul class="details" style="list-style-type: none;">
+    <li style="padding: 10px;">
+      <label for="emailid-input">Email id:</label>
+<input type="text" id="emailid" name="email">
+</li>
+  </ul>
+  <button class="save-btn1" onclick="saveuser()">Save</button>
+      </div>
+</div>
+
+  <script src = 'users.js'>
+    // let sidebar = document.querySelector(".sidebar");
+//  let sidebarBtn = document.querySelector(".sidebarBtn");
+//  sidebarBtn.onclick = function() {
+//    sidebar.classList.toggle("active");
+//    if(sidebar.classList.contains("active")){
+//    sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+//  }else
+//    sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+//  }
+  </script>
+ 
+ </body>
+ </html>

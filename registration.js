@@ -1,16 +1,29 @@
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+var admin = document.getElementById("radioOne");
+var user = document.getElementById("radioTwo");
 
-loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
 
-    if (username === "user" && password === "web_dev") {
-        alert("You have successfully logged in.");
-        location.reload();
-    } else {
-        loginErrorMsg.style.opacity = 1;
-    }
-})
+//data
+const email = document.getElementById("email");
+const pass = document.getElementById("password");
+
+
+function registerClick(){
+        console.log(email.value );
+        console.log(pass.value);
+        if (email.value == "user" && pass.value == "123") {
+            if (admin.checked == true){
+                console.log(admin.checked);
+
+                // window.location.href="dashboardadmin.html";
+            } else {
+                console.log(user.checked);
+                // window.location.href="dashboard.html";
+            }
+            
+            
+            
+        } else {
+            // loginErrorMsg.style.opacity = 1;
+            console.log("error");
+        }
+}

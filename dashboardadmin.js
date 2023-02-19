@@ -1,6 +1,15 @@
 // var table = document.getElementById("tableData");
 
 
+function viewDashboard(){
+   window.location.href="dashboardadmin.html";
+
+}
+function viewTeam(){
+   console.log("users clicked");
+   window.location.href="AddUsers/users.html";
+
+}
 
 function addtask(){
     // window.alert("hello");
@@ -13,12 +22,24 @@ function addtask(){
  {
      document.getElementById("add").style.display = "none";
  }
+
+ function clearDiv(){
+   const listItem1 = document.getElementById("userName");
+   listItem1.value = "";
+   const listItem2 = document.getElementById("emailid");
+listItem2.value = "";
+
+ }
+
  function saveDiv(){
+   //window.alert("going to add");
     addTableRow();
+  //  window.alert("going to close");
     closeDiv();
+    clearDiv();
     
  }
- 
+
  function ondelete(ths){
     $(ths).closest("tr").remove();
     window.alert("Delete task");
@@ -44,6 +65,6 @@ function addtask(){
     var hours = $("#hours").val();
     var table = $("#tableData").val();
 
-    var html = " <tr><td> <a href='http://example.com'>"+taskName+"</a></td><td>"+taskDescription+"</td><td>"+asignee+"</td><td>"+sd+"</td><td>"+ed+"</td><td>"+hours+"</td><td><i class='fa fa-trash-o' onclick='ondelete(this);' aria-hidden='true'></i></td></tr>  ";
+    var html = " <tr><td> <a href='taskDetails.html'>"+taskName+"</a></td><td>"+taskDescription+"</td><td>"+asignee+"</td><td>"+sd+"</td><td>"+ed+"</td><td>"+hours+"</td><td><i class='fa fa-trash-o' onclick='ondelete(this);' aria-hidden='true'></i></td></tr>  ";
     $("#tableData tbody").append(html);
     }

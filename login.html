@@ -110,6 +110,17 @@
       color: #fff;
       text-align: center;
       }
+      input[type=button]{
+        width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #1c87c9; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
       .btn-block {
       margin-top: 10px;
       text-align: center;
@@ -128,6 +139,7 @@
       button:hover {
       background: #26a9e0;
       }
+      
     </style>
   </head>
   <body>
@@ -146,9 +158,12 @@
         <input type="text" name="name" id="email" placeholder="Email" required/>
        <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
         <input type="password" name="name" id="password" placeholder="Password" required/>
-        <div class="btn-block">
-          <input type="button" name="Second" id="Second" value="Login" onClick="loginClick()">
-          <!-- <button onclick = "loginClick()">Login</button> -->
+        <div class="btn-login">
+          <center>
+            <!-- <button class="btn-login"  onclick="loginClick()">Login</button> -->
+
+            <input type="button" name="login" id="loginId" value="Login" onClick="loginClick()">
+          </center>
         </div>
       </form>
       <div style="text-align: center">

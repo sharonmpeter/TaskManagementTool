@@ -89,6 +89,17 @@
       input[type=radio]:checked + label:after {
       opacity: 1;
       }
+      input[type=submit]{
+        width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #1c87c9; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
       input[type=text], input[type=password] {
       width: calc(100% - 57px);
       height: 36px;
@@ -143,27 +154,21 @@
         </div>
         <hr>
         <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-        <input type="text" name="name" id="name" placeholder="Email" required/>
+        <input type="text" name="name" id="email" placeholder="Email" required/>
         <label id="icon" for="name"><i class="fas fa-user"></i></label>
         <input type="text" name="name" id="name" placeholder="Name" required/>
         <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-        <input type="password" name="name" id="name" placeholder="Password" required/>
-        <!-- <hr>
-        <div class="gender">
-          <input type="radio" value="none" id="male" name="gender" checked/>
-          <label for="male" class="radio">Male</label>
-          <input type="radio" value="none" id="female" name="gender" />
-          <label for="female" class="radio">Female</label>
-        </div>
-        <hr> -->
-        <div class="btn-block">
-          <!-- <p>By clicking Register, you agree on our <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for W3Docs</a>.</p> -->
-          <button type="submit" onclick="loginClick()">Submit</button>
+        <input type="password" name="name" id="password" placeholder="Password" required/>
+        <div class="btn-register">
+          <center>
+            <input type="submit" name="register" id="registerId" value="Register" onClick="registerClick()">
+          </center>
         </div>
       </form>
       <div style="text-align: center">
         <span class="psw">Already have an account? <a href="login.html">Login</a></span>
       </div>
     </div>
+    <script src = "registration.js"></script>
   </body>
 </html>

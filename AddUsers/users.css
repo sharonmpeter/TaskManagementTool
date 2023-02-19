@@ -208,6 +208,15 @@ nav .profile-details i{
   display: flex;
   align-items: center;
 }
+.add-button {
+  padding: 0px 10px 0px 10px;
+  float: right; 
+  /* background-color: grey;  */
+  /* color: black; */
+}
+.save-btn {
+  padding: 0px 10px 0px 10px;
+}
 .home-content .box .indicator i{
   height: 20px;
   width: 20px;
@@ -259,10 +268,9 @@ nav .profile-details i{
   /* padding: 0 20px; */
 }
 
-
 /* left box */
 .home-content .sales-boxes .recent-sales{
-  width: 65%;
+  width: 105%;
   background: #fff;
   padding: 20px 30px;
   margin: 0 20px;
@@ -272,7 +280,8 @@ nav .profile-details i{
 .home-content .sales-boxes .sales-details{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-right: 100px;
 }
 .sales-boxes .box .title{
   font-size: 24px;
@@ -346,6 +355,50 @@ nav .profile-details i{
   font-weight: 400;
   color: #333;
 }
+.add-content{
+    display:none;
+    position:relative;
+    text-align: center;
+    background-color: #66b0ff;
+    margin-top:-247px;
+    left:110px;
+    top:-110px;
+    margin-right: 170px;
+    border: 2px solid black;
+    padding: 10px 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.add-content1{
+  display:none;
+  position:relative;
+  text-align: center;
+  background-color: #fff;
+  margin-top:-247px;
+  left:110px;
+  top:-110px;
+  margin-right: 170px;
+  border: 2px solid black;
+  padding: 10px 0;
+}
+
+.close-btn1 {
+position: absolute;
+top: 5px;
+right: 5px;
+cursor: pointer;
+}
+
+li input[type="text"] {
+  width: 400px; 
+}
+
 /* Responsive Media Query */
 @media (max-width: 1240px) {
   .sidebar{

@@ -16,7 +16,7 @@ function loginClick(){
         console.log(pass.value);
         if (email.value == "user" && pass.value == "123") {
             if (admin.checked == true){
-                window.location.href="dashboardadmin.html";
+                window.location.href="./dashboardadmin.html";
             } else {
                 window.location.href="dashboard.html";
             }
